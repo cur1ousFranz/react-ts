@@ -1,4 +1,5 @@
 import { Component } from "react";
+import PokemonForm from "./components/PokemonForm";
 
 export interface Pokemon {
   name: string,
@@ -26,6 +27,11 @@ class App extends Component {
     })
   }
 
+  updatePokemons = (name: string, level: number) => {
+   const newPokemon = [...this.state.pokemons, { name, level }];
+   this.setState({ pokemons: newPokemon});
+  }
+
   deletePokemon = (index: number) => {
     const newPokemons = this.state.pokemons.filter((pokemon, i) => i !== index);
     this.setState({ pokemons: newPokemons });
@@ -37,6 +43,7 @@ class App extends Component {
     return (
       <div className="App pokemon-container">
         <h1 className="pokemon-header">Pokemon List</h1>
+        <PokemonForm updatePokemons={this.updatePokemons} />
         <ul className="ul-pokemons">
           {pokemons.map((pokemon, index) => (
             <li className="pokemon-list" key={index}>
