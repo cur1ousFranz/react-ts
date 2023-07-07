@@ -11,3 +11,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.pokemon-container {
+  padding: 32px;
+  width: 50%;
+  margin: auto;
+  position: relative;
+}
+
+.pokemon-header {
+  color: rgb(145, 145, 250);
+}
+
+.ul-pokemons {
+  list-style-type: none;
+}
+
+.pokemon-list {
+  padding: 18px 12px;
+  border-radius: 12px;
+  border: 1px solid black;
+  margin: 15px 0px;
+  background-color: rgb(197, 197, 243);
+  text-decoration: none;
+}
