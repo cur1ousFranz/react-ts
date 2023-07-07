@@ -12,9 +12,19 @@ export default class PokemonForm extends Component<FormProps> {
         level: 0,
     }
 
+    handleForm = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        const { updatePokemons } = this.props;
+        const { name, level } = this.state;
+        if(name && level) {
+            updatePokemons(name, level);
+        }
+    }
+
     render() {
         return (
-            <form className='pokemon-form'>
+            <form onSubmit={this.handleForm} className='pokemon-form'>
                 <div>
                     <input
                         onChange={(e) => this.setState({ name: e.target.value })}
