@@ -48,3 +48,23 @@ code {
   cursor: pointer;
 }
 
+.pokemon-form .name,
+.level {
+  width: 100%;
+  padding: 12px 12px;
+  margin: 5px 0px;
+  border: 1px solid rgb(214, 214, 250);
+}
+
+.pokemon-submit {
+  padding: 12px 12px;
+  margin: 5px 0px;
+  background-color: rgb(214, 214, 250);
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.pokemon-submit:hover {
+  background-color: rgb(189, 189, 248);
+}
+
