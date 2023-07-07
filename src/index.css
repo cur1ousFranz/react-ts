@@ -35,3 +35,16 @@ code {
   background-color: rgb(197, 197, 243);
   text-decoration: none;
 }
+
+.pokemon-list span {
+  float: right;
+  font-size: 14px;
+  padding: 0px 5px;
+  border-radius: 12px;
+}
+
+.pokemon-list span:hover {
+  background-color: rgb(214, 214, 250);
+  cursor: pointer;
+}
+

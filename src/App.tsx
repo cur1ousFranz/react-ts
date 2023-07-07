@@ -26,6 +26,11 @@ class App extends Component {
     })
   }
 
+  deletePokemon = (index: number) => {
+    const newPokemons = this.state.pokemons.filter((pokemon, i) => i !== index);
+    this.setState({ pokemons: newPokemons });
+  }
+
   render() {
     const pokemons = this.state.pokemons;
 
@@ -36,6 +41,7 @@ class App extends Component {
           {pokemons.map((pokemon, index) => (
             <li className="pokemon-list" key={index}>
               {pokemon.name}
+              <span onClick={() => this.deletePokemon(index)}>Delete</span>
             </li>
           ))}
         </ul>
